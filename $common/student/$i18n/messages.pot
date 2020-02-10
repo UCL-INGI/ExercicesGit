@@ -1,0 +1,1470 @@
+# Translations template for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-02-04 14:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#. name
+#: ../../../course.yaml
+msgid "[LELEC2103] Project in electricity 3 : Electronic systems"
+msgstr ""
+
+#: ../../../git-add/run:21 ../../../git-commit/run:21
+#: ../../../git-gitignore/run:21 ../../../git-log/run:14
+#: ../../../git-log/run:25 ../../../git-pull/run:21 ../../../git-pull/run:31
+#: ../../../git-push/run:22 ../../../git_branches/run:21
+#: ../../../git_branches/run:31 ../../../git_catastrophy_scenario_2/run:21
+#: ../../../git_catastrophy_scenario_2/run:31
+#: ../../../git_catastrophy_scenario_3/run:21
+#: ../../../git_catastrophy_scenario_3/run:31
+msgid "Bonne réponse"
+msgstr ""
+
+#: ../../../git-add/run:31 ../../../git-commit/run:31
+#: ../../../git-gitignore/run:31 ../../../git-log/run:33
+#: ../../../git-pull/run:45 ../../../git-push/run:32
+#: ../../../git_branches/run:45 ../../../git_catastrophy_scenario_2/run:45
+#: ../../../git_catastrophy_scenario_3/run:45
+msgid "Bien joué !"
+msgstr ""
+
+#: ../../../git-add/run:31 ../../../git-commit/run:31
+#: ../../../git-gitignore/run:31 ../../../git-log/run:33
+#: ../../../git-pull/run:45 ../../../git-push/run:32
+#: ../../../git_branches/run:45 ../../../git_catastrophy_scenario_2/run:45
+#: ../../../git_catastrophy_scenario_3/run:45
+msgid "Il y a des erreurs dans vos réponses"
+msgstr ""
+
+#. author
+#: ../../../git-add/task.yaml ../../../git-commit/task.yaml
+#: ../../../git-gitignore/task.yaml ../../../git-log/task.yaml
+#: ../../../git-pull/task.yaml ../../../git-push/task.yaml
+#: ../../../git_branches/task.yaml
+#: ../../../git_catastrophy_scenario_2/task.yaml
+#: ../../../git_catastrophy_scenario_3/task.yaml
+msgid "Mathieu Jadin"
+msgstr ""
+
+#. context
+#: ../../../git-add/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Dans cet exercice vous allez devoir sélectionner des changements à "
+"rajouter dans la ``staging area``.\n"
+"\n"
+"Vous pouvez utiliser la commande ``git add file [other-files...]`` pour "
+"cela.\n"
+"Vous pouvez l'utiliser avec l'option ``-p``\n"
+"pour sélectionner une partie des modifications à l'intérieur d'un "
+"fichier.\n"
+"\n"
+"Pour regarder ce qui se trouve dans la ``staging area``,\n"
+"vous pouvez utiliser la commande ``git status``.\n"
+"Les fichiers en verts sont les fichiers dans la ``staging area``.\n"
+"``git diff --cached`` vous donnera les modifications exactes qui s'y "
+"trouve.\n"
+"\n"
+"Vous pouvez également utiliser des outils graphiques tels que Sourcetree_"
+" ou GitKraken_.\n"
+"\n"
+".. _Sourcetree: https://www.sourcetreeapp.com/\n"
+".. _GitKraken: https://www.gitkraken.com/\n"
+msgstr ""
+
+#. name
+#: ../../../git-add/task.yaml
+msgid "Git: Ajouter des fichiers dans la staging area"
+msgstr ""
+
+#. name, git-add, header
+#: ../../../git-add/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git-add/git-"
+"add.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Ajouter uniquement les fichiers `to_stag.txt` et `to_stag_2.txt`"
+" à la ``staging area``. Une fois que c'est fait, ré-archivez le dossier "
+"complet et uploadez-le.\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-add/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:24
+#: ../../../git-commit/common/compare_repos.py:24
+#: ../../../git-gitignore/common/compare_repos.py:24
+#: ../../../git-log/common/compare_repos.py:24
+#: ../../../git-pull/common/compare_repos.py:24
+#: ../../../git-push/common/compare_repos.py:24
+#: ../../../git_branches/common/compare_repos.py:24
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:24
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:24
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:24
+#, python-format
+msgid "Impossible de trouver le dossier '%s' ou '%s'"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:31
+#: ../../../git-commit/common/compare_repos.py:31
+#: ../../../git-gitignore/common/compare_repos.py:31
+#: ../../../git-log/common/compare_repos.py:31
+#: ../../../git-pull/common/compare_repos.py:31
+#: ../../../git-push/common/compare_repos.py:31
+#: ../../../git_branches/common/compare_repos.py:31
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:31
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:31
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:31
+msgid ""
+"Le dossier qui est censé contenir la solution de l'exercice n'est pas un "
+"repository git. Contactez l'auteur de la tâche pour le lui signaler."
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:40
+#: ../../../git-commit/common/compare_repos.py:40
+#: ../../../git-gitignore/common/compare_repos.py:40
+#: ../../../git-log/common/compare_repos.py:40
+#: ../../../git-pull/common/compare_repos.py:40
+#: ../../../git-push/common/compare_repos.py:40
+#: ../../../git_branches/common/compare_repos.py:40
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:40
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:40
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:40
+msgid "Le dossier que vous avez soumis ne contient pas de repository git"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:46
+#: ../../../git-commit/common/compare_repos.py:46
+#: ../../../git-gitignore/common/compare_repos.py:46
+#: ../../../git-log/common/compare_repos.py:46
+#: ../../../git-pull/common/compare_repos.py:46
+#: ../../../git-push/common/compare_repos.py:46
+#: ../../../git_branches/common/compare_repos.py:46
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:46
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:46
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:46
+msgid "Le repo que vous avez soumis doit être le clone et non le repo distant"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:48
+#: ../../../git-commit/common/compare_repos.py:48
+#: ../../../git-gitignore/common/compare_repos.py:48
+#: ../../../git-log/common/compare_repos.py:48
+#: ../../../git-pull/common/compare_repos.py:48
+#: ../../../git-push/common/compare_repos.py:48
+#: ../../../git_branches/common/compare_repos.py:48
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:48
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:48
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:48
+msgid "Le repo que vous avez soumis doit être le repo distant et non le clone"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:57
+#: ../../../git-commit/common/compare_repos.py:57
+#: ../../../git-gitignore/common/compare_repos.py:57
+#: ../../../git-log/common/compare_repos.py:57
+#: ../../../git-pull/common/compare_repos.py:57
+#: ../../../git-push/common/compare_repos.py:57
+#: ../../../git_branches/common/compare_repos.py:57
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:57
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:57
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:57
+#, python-format
+msgid ""
+"Le fichier '%s' ne devrait pas être supprimé du working directory, "
+"seulement ignoré"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:60
+#: ../../../git-commit/common/compare_repos.py:60
+#: ../../../git-gitignore/common/compare_repos.py:60
+#: ../../../git-log/common/compare_repos.py:60
+#: ../../../git-pull/common/compare_repos.py:60
+#: ../../../git-push/common/compare_repos.py:60
+#: ../../../git_branches/common/compare_repos.py:60
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:60
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:60
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:60
+#, python-format
+msgid "Le fichier '%s' devrait être dans la liste des fichiers ignorés"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:64
+#: ../../../git-commit/common/compare_repos.py:64
+#: ../../../git-gitignore/common/compare_repos.py:64
+#: ../../../git-log/common/compare_repos.py:64
+#: ../../../git-pull/common/compare_repos.py:64
+#: ../../../git-push/common/compare_repos.py:64
+#: ../../../git_branches/common/compare_repos.py:64
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:64
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:64
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:64
+#, python-format
+msgid "Le fichier '%s' ne devrait pas être dans la liste des fichiers ignorés"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:100
+#: ../../../git-commit/common/compare_repos.py:100
+#: ../../../git-gitignore/common/compare_repos.py:100
+#: ../../../git-log/common/compare_repos.py:100
+#: ../../../git-pull/common/compare_repos.py:100
+#: ../../../git-push/common/compare_repos.py:100
+#: ../../../git_branches/common/compare_repos.py:100
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:100
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:100
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:100
+#, python-format
+msgid "Le fichier '%s' devrait être dans la liste des fichiers non traqués"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:104
+#: ../../../git-commit/common/compare_repos.py:104
+#: ../../../git-gitignore/common/compare_repos.py:104
+#: ../../../git-log/common/compare_repos.py:104
+#: ../../../git-pull/common/compare_repos.py:104
+#: ../../../git-push/common/compare_repos.py:104
+#: ../../../git_branches/common/compare_repos.py:104
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:104
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:104
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:104
+#, python-format
+msgid "Le fichier '%s' ne devrait pas être dans la liste des fichiers non traqués"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:110
+#: ../../../git-commit/common/compare_repos.py:110
+#: ../../../git-gitignore/common/compare_repos.py:110
+#: ../../../git-log/common/compare_repos.py:110
+#: ../../../git-pull/common/compare_repos.py:110
+#: ../../../git-push/common/compare_repos.py:110
+#: ../../../git_branches/common/compare_repos.py:110
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:110
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:110
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:110
+msgid ""
+"\n"
+"\n"
+"::\n"
+"\n"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:111
+#: ../../../git-commit/common/compare_repos.py:111
+#: ../../../git-gitignore/common/compare_repos.py:111
+#: ../../../git-log/common/compare_repos.py:111
+#: ../../../git-pull/common/compare_repos.py:111
+#: ../../../git-push/common/compare_repos.py:111
+#: ../../../git_branches/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:111
+msgid ""
+"\n"
+"\n"
+"Avant"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:111
+#: ../../../git-commit/common/compare_repos.py:111
+#: ../../../git-gitignore/common/compare_repos.py:111
+#: ../../../git-log/common/compare_repos.py:111
+#: ../../../git-pull/common/compare_repos.py:111
+#: ../../../git-push/common/compare_repos.py:111
+#: ../../../git_branches/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:111
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:111
+msgid ""
+"\n"
+"\n"
+"Après"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:113
+#: ../../../git-commit/common/compare_repos.py:113
+#: ../../../git-gitignore/common/compare_repos.py:113
+#: ../../../git-log/common/compare_repos.py:113
+#: ../../../git-pull/common/compare_repos.py:113
+#: ../../../git-push/common/compare_repos.py:113
+#: ../../../git_branches/common/compare_repos.py:113
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:113
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:113
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:113
+msgid ""
+"\n"
+"\n"
+"::\n"
+"\n"
+"Fichier supprimé"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:114
+#: ../../../git-commit/common/compare_repos.py:114
+#: ../../../git-gitignore/common/compare_repos.py:114
+#: ../../../git-log/common/compare_repos.py:114
+#: ../../../git-pull/common/compare_repos.py:114
+#: ../../../git-push/common/compare_repos.py:114
+#: ../../../git_branches/common/compare_repos.py:114
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:114
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:114
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:114
+msgid ""
+"\n"
+"\n"
+"::\n"
+"\n"
+"Fichier renommé, à l'origine "
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:115
+#: ../../../git-commit/common/compare_repos.py:115
+#: ../../../git-gitignore/common/compare_repos.py:115
+#: ../../../git-log/common/compare_repos.py:115
+#: ../../../git-pull/common/compare_repos.py:115
+#: ../../../git-push/common/compare_repos.py:115
+#: ../../../git_branches/common/compare_repos.py:115
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:115
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:115
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:115
+msgid ""
+"\n"
+"\n"
+"::\n"
+"\n"
+"Fichier renommé en "
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:116
+#: ../../../git-commit/common/compare_repos.py:116
+#: ../../../git-gitignore/common/compare_repos.py:116
+#: ../../../git-log/common/compare_repos.py:116
+#: ../../../git-pull/common/compare_repos.py:116
+#: ../../../git-push/common/compare_repos.py:116
+#: ../../../git_branches/common/compare_repos.py:116
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:116
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:116
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:116
+msgid ""
+"\n"
+"\n"
+"::\n"
+"\n"
+"Données binaires omises"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:130
+#: ../../../git-commit/common/compare_repos.py:130
+#: ../../../git-gitignore/common/compare_repos.py:130
+#: ../../../git-log/common/compare_repos.py:130
+#: ../../../git-pull/common/compare_repos.py:130
+#: ../../../git-push/common/compare_repos.py:130
+#: ../../../git_branches/common/compare_repos.py:130
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:130
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:130
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:130
+msgid "La modification suivante devrait être dans le working directory"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:135
+#: ../../../git-commit/common/compare_repos.py:135
+#: ../../../git-gitignore/common/compare_repos.py:135
+#: ../../../git-log/common/compare_repos.py:135
+#: ../../../git-pull/common/compare_repos.py:135
+#: ../../../git-push/common/compare_repos.py:135
+#: ../../../git_branches/common/compare_repos.py:135
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:135
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:135
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:135
+msgid "La modification suivante ne devrait pas être dans le working directory"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:145
+#: ../../../git-commit/common/compare_repos.py:145
+#: ../../../git-gitignore/common/compare_repos.py:145
+#: ../../../git-log/common/compare_repos.py:145
+#: ../../../git-pull/common/compare_repos.py:145
+#: ../../../git-push/common/compare_repos.py:145
+#: ../../../git_branches/common/compare_repos.py:145
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:145
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:145
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:145
+msgid "La modification suivante devrait être dans la staging zone"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:150
+#: ../../../git-commit/common/compare_repos.py:150
+#: ../../../git-gitignore/common/compare_repos.py:150
+#: ../../../git-log/common/compare_repos.py:150
+#: ../../../git-pull/common/compare_repos.py:150
+#: ../../../git-push/common/compare_repos.py:150
+#: ../../../git_branches/common/compare_repos.py:150
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:150
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:150
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:150
+msgid "La modification suivante ne devrait pas être dans la staging zone"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:156
+#: ../../../git-commit/common/compare_repos.py:156
+#: ../../../git-gitignore/common/compare_repos.py:156
+#: ../../../git-log/common/compare_repos.py:156
+#: ../../../git-pull/common/compare_repos.py:156
+#: ../../../git-push/common/compare_repos.py:156
+#: ../../../git_branches/common/compare_repos.py:156
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:156
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:156
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:156
+#, python-format
+msgid "La branche '%s' devrait exister"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:158
+#: ../../../git-commit/common/compare_repos.py:158
+#: ../../../git-gitignore/common/compare_repos.py:158
+#: ../../../git-log/common/compare_repos.py:158
+#: ../../../git-pull/common/compare_repos.py:158
+#: ../../../git-push/common/compare_repos.py:158
+#: ../../../git_branches/common/compare_repos.py:158
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:158
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:158
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:158
+#, python-format
+msgid "La branche '%s' ne devrait pas exister"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:161
+#: ../../../git-commit/common/compare_repos.py:161
+#: ../../../git-gitignore/common/compare_repos.py:161
+#: ../../../git-log/common/compare_repos.py:161
+#: ../../../git-pull/common/compare_repos.py:161
+#: ../../../git-push/common/compare_repos.py:161
+#: ../../../git_branches/common/compare_repos.py:161
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:161
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:161
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:161
+#, python-format
+msgid "La branch active devrait être '%s'"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:176
+#: ../../../git-commit/common/compare_repos.py:176
+#: ../../../git-gitignore/common/compare_repos.py:176
+#: ../../../git-log/common/compare_repos.py:176
+#: ../../../git-pull/common/compare_repos.py:176
+#: ../../../git-push/common/compare_repos.py:176
+#: ../../../git_branches/common/compare_repos.py:176
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:176
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:176
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:176
+#, python-format
+msgid ""
+"Le message du commit '%s' n'est pas celui attendu:\n"
+"\n"
+"Attendu:\n"
+"\n"
+"::\n"
+"\n"
+"%s\n"
+"\n"
+"Reçu:\n"
+"\n"
+"::\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:182
+#: ../../../git-commit/common/compare_repos.py:182
+#: ../../../git-gitignore/common/compare_repos.py:182
+#: ../../../git-log/common/compare_repos.py:182
+#: ../../../git-pull/common/compare_repos.py:182
+#: ../../../git-push/common/compare_repos.py:182
+#: ../../../git_branches/common/compare_repos.py:182
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:182
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:182
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:182
+#, python-format
+msgid ""
+"Les commits déjà présents dans la branche '%s' sont corrects mais il y a "
+"plus de commits dans la solution que dans votre soumission"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:192
+#: ../../../git-commit/common/compare_repos.py:192
+#: ../../../git-gitignore/common/compare_repos.py:192
+#: ../../../git-log/common/compare_repos.py:192
+#: ../../../git-pull/common/compare_repos.py:192
+#: ../../../git-push/common/compare_repos.py:192
+#: ../../../git_branches/common/compare_repos.py:192
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:192
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:192
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:192
+msgid ""
+"Vous avez trop des commits dans l'historique par rapport à la solution "
+"attendue"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:203
+#: ../../../git-add/common/compare_repos.py:227
+#: ../../../git-commit/common/compare_repos.py:203
+#: ../../../git-commit/common/compare_repos.py:227
+#: ../../../git-gitignore/common/compare_repos.py:203
+#: ../../../git-gitignore/common/compare_repos.py:227
+#: ../../../git-log/common/compare_repos.py:203
+#: ../../../git-log/common/compare_repos.py:227
+#: ../../../git-pull/common/compare_repos.py:203
+#: ../../../git-pull/common/compare_repos.py:227
+#: ../../../git-push/common/compare_repos.py:203
+#: ../../../git-push/common/compare_repos.py:227
+#: ../../../git_branches/common/compare_repos.py:203
+#: ../../../git_branches/common/compare_repos.py:227
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:203
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:227
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:203
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:227
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:203
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:227
+#, python-format
+msgid ""
+"Impossible de trouver une modification faite au fichier '%s' dans le "
+"commit '%s' de la branche '%s'"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:210
+#: ../../../git-commit/common/compare_repos.py:210
+#: ../../../git-gitignore/common/compare_repos.py:210
+#: ../../../git-log/common/compare_repos.py:210
+#: ../../../git-pull/common/compare_repos.py:210
+#: ../../../git-push/common/compare_repos.py:210
+#: ../../../git_branches/common/compare_repos.py:210
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:210
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:210
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:210
+#, python-format
+msgid ""
+"La modification faite au fichier '%s' ne devrait pas se trouver dans le "
+"commit '%s' de la branche '%s'"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:219
+#: ../../../git-commit/common/compare_repos.py:219
+#: ../../../git-gitignore/common/compare_repos.py:219
+#: ../../../git-log/common/compare_repos.py:219
+#: ../../../git-pull/common/compare_repos.py:219
+#: ../../../git-push/common/compare_repos.py:219
+#: ../../../git_branches/common/compare_repos.py:219
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:219
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:219
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:219
+#, python-format
+msgid ""
+"La modification faite au dossier '%s' ne devrait pas se trouver dans le "
+"commit '%s' de la branche '%s'"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:239
+#: ../../../git-commit/common/compare_repos.py:239
+#: ../../../git-gitignore/common/compare_repos.py:239
+#: ../../../git-log/common/compare_repos.py:239
+#: ../../../git-pull/common/compare_repos.py:239
+#: ../../../git-push/common/compare_repos.py:239
+#: ../../../git_branches/common/compare_repos.py:239
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:239
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:239
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:239
+msgid "Contenu non décodable en utf-8"
+msgstr ""
+
+#: ../../../git-add/common/compare_repos.py:253
+#: ../../../git-commit/common/compare_repos.py:253
+#: ../../../git-gitignore/common/compare_repos.py:253
+#: ../../../git-log/common/compare_repos.py:253
+#: ../../../git-pull/common/compare_repos.py:253
+#: ../../../git-push/common/compare_repos.py:253
+#: ../../../git_branches/common/compare_repos.py:253
+#: ../../../git_catastrophy_scenario_2/common/compare_repos.py:253
+#: ../../../git_catastrophy_scenario_3/common/common/compare_repos.py:253
+#: ../../../git_catastrophy_scenario_3/common/compare_repos.py:253
+#, python-format
+msgid ""
+"La version du fichier '%s' dans le commit '%s' de la branche '%s' n'est "
+"pas celui attendu. Voici un diff entre la bonne version et celle que vous"
+" avez soumise:\n"
+"\n"
+"::\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:30
+#: ../../../git-add/common/inginious_test_result.py:63
+#: ../../../git-commit/common/inginious_test_result.py:30
+#: ../../../git-commit/common/inginious_test_result.py:63
+#: ../../../git-gitignore/common/inginious_test_result.py:30
+#: ../../../git-gitignore/common/inginious_test_result.py:63
+#: ../../../git-log/common/inginious_test_result.py:30
+#: ../../../git-log/common/inginious_test_result.py:63
+#: ../../../git-pull/common/inginious_test_result.py:30
+#: ../../../git-pull/common/inginious_test_result.py:63
+#: ../../../git-push/common/inginious_test_result.py:30
+#: ../../../git-push/common/inginious_test_result.py:63
+#: ../../../git_branches/common/inginious_test_result.py:30
+#: ../../../git_branches/common/inginious_test_result.py:63
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:30
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:63
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:30
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:63
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:30
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:63
+msgid "✔"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:36
+#: ../../../git-commit/common/inginious_test_result.py:36
+#: ../../../git-gitignore/common/inginious_test_result.py:36
+#: ../../../git-log/common/inginious_test_result.py:36
+#: ../../../git-pull/common/inginious_test_result.py:36
+#: ../../../git-push/common/inginious_test_result.py:36
+#: ../../../git_branches/common/inginious_test_result.py:36
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:36
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:36
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:36
+msgid "... Erreur imprévue, merci de la signaler à l'auteur de la tâche"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:39
+#: ../../../git-commit/common/inginious_test_result.py:39
+#: ../../../git-gitignore/common/inginious_test_result.py:39
+#: ../../../git-log/common/inginious_test_result.py:39
+#: ../../../git-pull/common/inginious_test_result.py:39
+#: ../../../git-push/common/inginious_test_result.py:39
+#: ../../../git_branches/common/inginious_test_result.py:39
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:39
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:39
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:39
+msgid "E"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:45
+#: ../../../git-add/common/inginious_test_result.py:72
+#: ../../../git-add/common/inginious_test_result.py:79
+#: ../../../git-commit/common/inginious_test_result.py:45
+#: ../../../git-commit/common/inginious_test_result.py:72
+#: ../../../git-commit/common/inginious_test_result.py:79
+#: ../../../git-gitignore/common/inginious_test_result.py:45
+#: ../../../git-gitignore/common/inginious_test_result.py:72
+#: ../../../git-gitignore/common/inginious_test_result.py:79
+#: ../../../git-log/common/inginious_test_result.py:45
+#: ../../../git-log/common/inginious_test_result.py:72
+#: ../../../git-log/common/inginious_test_result.py:79
+#: ../../../git-pull/common/inginious_test_result.py:45
+#: ../../../git-pull/common/inginious_test_result.py:72
+#: ../../../git-pull/common/inginious_test_result.py:79
+#: ../../../git-push/common/inginious_test_result.py:45
+#: ../../../git-push/common/inginious_test_result.py:72
+#: ../../../git-push/common/inginious_test_result.py:79
+#: ../../../git_branches/common/inginious_test_result.py:45
+#: ../../../git_branches/common/inginious_test_result.py:72
+#: ../../../git_branches/common/inginious_test_result.py:79
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:45
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:72
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:79
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:45
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:72
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:79
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:45
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:72
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:79
+msgid "✘"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:51
+#: ../../../git-commit/common/inginious_test_result.py:51
+#: ../../../git-gitignore/common/inginious_test_result.py:51
+#: ../../../git-log/common/inginious_test_result.py:51
+#: ../../../git-pull/common/inginious_test_result.py:51
+#: ../../../git-push/common/inginious_test_result.py:51
+#: ../../../git_branches/common/inginious_test_result.py:51
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:51
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:51
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:51
+msgid "Ignoré {0!r}"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:54
+#: ../../../git-commit/common/inginious_test_result.py:54
+#: ../../../git-gitignore/common/inginious_test_result.py:54
+#: ../../../git-log/common/inginious_test_result.py:54
+#: ../../../git-pull/common/inginious_test_result.py:54
+#: ../../../git-push/common/inginious_test_result.py:54
+#: ../../../git_branches/common/inginious_test_result.py:54
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:54
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:54
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:54
+msgid "I"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:60
+#: ../../../git-commit/common/inginious_test_result.py:60
+#: ../../../git-gitignore/common/inginious_test_result.py:60
+#: ../../../git-log/common/inginious_test_result.py:60
+#: ../../../git-pull/common/inginious_test_result.py:60
+#: ../../../git-push/common/inginious_test_result.py:60
+#: ../../../git_branches/common/inginious_test_result.py:60
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:60
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:60
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:60
+msgid "✔ Le test a échoué comme attendu"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:69
+#: ../../../git-commit/common/inginious_test_result.py:69
+#: ../../../git-gitignore/common/inginious_test_result.py:69
+#: ../../../git-log/common/inginious_test_result.py:69
+#: ../../../git-pull/common/inginious_test_result.py:69
+#: ../../../git-push/common/inginious_test_result.py:69
+#: ../../../git_branches/common/inginious_test_result.py:69
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:69
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:69
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:69
+msgid "✘ Le test a réussi alors qu'il aurait dû échouer"
+msgstr ""
+
+#: ../../../git-add/common/inginious_test_result.py:78
+#: ../../../git-commit/common/inginious_test_result.py:78
+#: ../../../git-gitignore/common/inginious_test_result.py:78
+#: ../../../git-log/common/inginious_test_result.py:78
+#: ../../../git-pull/common/inginious_test_result.py:78
+#: ../../../git-push/common/inginious_test_result.py:78
+#: ../../../git_branches/common/inginious_test_result.py:78
+#: ../../../git_catastrophy_scenario_2/common/inginious_test_result.py:78
+#: ../../../git_catastrophy_scenario_3/common/common/inginious_test_result.py:78
+#: ../../../git_catastrophy_scenario_3/common/inginious_test_result.py:78
+msgid "Erreur interne"
+msgstr ""
+
+#: ../../../git-add/common/utils.py:13
+msgid "test"
+msgstr ""
+
+#: ../../../git-add/common/utils.py:34 ../../../git-add/common/utils.py:59
+#: ../../../git-commit/common/utils.py:33
+#: ../../../git-commit/common/utils.py:58
+#: ../../../git-gitignore/common/utils.py:33
+#: ../../../git-gitignore/common/utils.py:58
+#: ../../../git-log/common/utils.py:33 ../../../git-log/common/utils.py:58
+#: ../../../git-pull/common/utils.py:33 ../../../git-pull/common/utils.py:58
+#: ../../../git-push/common/utils.py:33 ../../../git-push/common/utils.py:58
+#: ../../../git_branches/common/utils.py:33
+#: ../../../git_branches/common/utils.py:58
+#: ../../../git_catastrophy_scenario_2/common/utils.py:33
+#: ../../../git_catastrophy_scenario_2/common/utils.py:58
+#: ../../../git_catastrophy_scenario_3/common/common/utils.py:33
+#: ../../../git_catastrophy_scenario_3/common/common/utils.py:58
+#: ../../../git_catastrophy_scenario_3/common/utils.py:33
+#: ../../../git_catastrophy_scenario_3/common/utils.py:58
+msgid "L'archive soumise n'est pas un zip"
+msgstr ""
+
+#: ../../../git-add/common/utils.py:68 ../../../git-commit/common/utils.py:67
+#: ../../../git-gitignore/common/utils.py:67
+#: ../../../git-log/common/utils.py:67 ../../../git-pull/common/utils.py:67
+#: ../../../git-push/common/utils.py:67
+#: ../../../git_branches/common/utils.py:67
+#: ../../../git_catastrophy_scenario_2/common/utils.py:67
+#: ../../../git_catastrophy_scenario_3/common/common/utils.py:67
+#: ../../../git_catastrophy_scenario_3/common/utils.py:67
+msgid "L'archive soumise est vide"
+msgstr ""
+
+#: ../../../git-add/common/utils.py:72 ../../../git-commit/common/utils.py:71
+#: ../../../git-gitignore/common/utils.py:71
+#: ../../../git-log/common/utils.py:71 ../../../git-pull/common/utils.py:71
+#: ../../../git-push/common/utils.py:71
+#: ../../../git_branches/common/utils.py:71
+#: ../../../git_catastrophy_scenario_2/common/utils.py:71
+#: ../../../git_catastrophy_scenario_3/common/common/utils.py:71
+#: ../../../git_catastrophy_scenario_3/common/utils.py:71
+msgid ""
+"Votre archive doit contenir un seul dossier à la racine qui contient "
+"votre soumission"
+msgstr ""
+
+#: ../../../git-add/common/utils.py:83 ../../../git-commit/common/utils.py:82
+#: ../../../git-gitignore/common/utils.py:82
+#: ../../../git-log/common/utils.py:82 ../../../git-pull/common/utils.py:82
+#: ../../../git-push/common/utils.py:82
+#: ../../../git_branches/common/utils.py:82
+#: ../../../git_catastrophy_scenario_2/common/utils.py:82
+#: ../../../git_catastrophy_scenario_3/common/common/utils.py:82
+#: ../../../git_catastrophy_scenario_3/common/utils.py:82
+#, python-format
+msgid "Votre archive ne contient pas le dossier '%s'"
+msgstr ""
+
+#. context
+#: ../../../git-commit/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Dans cet exercice, vous devez créer un ``commit`` avec les changements "
+"déjà présents dans la ``staging area``.\n"
+"\n"
+"L'outil en ligne de commande pour créer des commits est ``git commit [-m "
+"message]``\n"
+"(voir `documentation <https://git-scm.com/docs/git-commit>`_).\n"
+"\n"
+"Vous pouvez également utiliser des outils graphiques tels que Sourcetree_"
+" ou GitKraken_.\n"
+"\n"
+".. _Sourcetree: https://www.sourcetreeapp.com/\n"
+".. _GitKraken: https://www.gitkraken.com/\n"
+msgstr ""
+
+#. name
+#: ../../../git-commit/task.yaml
+msgid "Git: Ajouter des fichiers à l'historique"
+msgstr ""
+
+#. name, git-commit, header
+#: ../../../git-commit/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git-commit/git-"
+"commit.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Committez le fichier `to_commit.txt` avec le message \"Commit "
+"message\". Une fois que c'est fait, ré-archivez le dossier complet et "
+"uploadez-le.\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-commit/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+msgstr ""
+
+#. context
+#: ../../../git-gitignore/task.yaml ../../../git-log/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+msgstr ""
+
+#. name
+#: ../../../git-gitignore/task.yaml
+msgid "Git: Choisir les fichiers que l'on synchronise"
+msgstr ""
+
+#. name, git-gitignore, header
+#: ../../../git-gitignore/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git-gitignore"
+"/git-gitignore.zip>`_ qui contient déjà un repository cloné dans le sous-"
+"dossier `clone`.\n"
+"Ajoutez un fichier ``.gitignore`` pour empêchez la synchronisation des "
+"fichiers binaires\n"
+"(càd se terminant par .o, .javac), les fichiers de config d'un IDE "
+"Jetbrains\n"
+"(dans le dossier ./idea).\n"
+"Pour l'exercice, ce fichier doit se trouver dans le ``working "
+"directory``, donc ne le déplacez pas dans la ``staging zone`` ou "
+"l'historique.\n"
+"\n"
+"Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-gitignore/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+"\n"
+msgstr ""
+
+#: ../../../git-log/run:17 ../../../git-log/run:28
+msgid "Mauvaise réponse"
+msgstr ""
+
+#. name
+#: ../../../git-log/task.yaml
+msgid "Git: Explorer l'historique"
+msgstr ""
+
+#. name, git-find-log, name
+#: ../../../git-log/task.yaml
+msgid "Trouver un commit par message"
+msgstr ""
+
+#. name, git-find-log, header
+#: ../../../git-log/task.yaml
+msgid ""
+"Trouvez l'identifiant du commit avec pour message \"Even I can change the"
+" readme file\" dans le `repository <https://inginious.org/course/git/git-"
+"log/git-find-log.zip>`_ ?"
+msgstr ""
+
+#. name, git-find-blame, name
+#: ../../../git-log/task.yaml
+msgid "Trouver l'auteur d'une ligne"
+msgstr ""
+
+#. name, git-find-blame, header
+#: ../../../git-log/task.yaml
+msgid ""
+"Vous avez repéré qu'un de vos collègues fait une erreur dans son travail\n"
+"et vous souhaitez lui faire part de votre mécontentement ?\n"
+"Rien de plus facile avec ``git blame``.\n"
+"\n"
+"Pouvez-vous l'utiliser pour identifier l'email de la personne qui a écrit"
+" la ligne 3 du fichier ``runme.sh`` dans le `repository "
+"<https://inginious.org/course/git/git-log/git-find-log.zip>`_ ?"
+msgstr ""
+
+#: ../../../git-pull/run:21 ../../../git-pull/run:23
+#: ../../../git_branches/run:21 ../../../git_branches/run:23
+#: ../../../git_catastrophy_scenario_2/run:21
+#: ../../../git_catastrophy_scenario_2/run:23
+#: ../../../git_catastrophy_scenario_3/run:21
+#: ../../../git_catastrophy_scenario_3/run:23
+msgid ""
+"Repo local\n"
+"\n"
+"-----------------\n"
+"\n"
+msgstr ""
+
+#: ../../../git-pull/run:31 ../../../git-pull/run:33
+#: ../../../git_branches/run:31 ../../../git_branches/run:33
+#: ../../../git_catastrophy_scenario_2/run:31
+#: ../../../git_catastrophy_scenario_2/run:33
+#: ../../../git_catastrophy_scenario_3/run:31
+#: ../../../git_catastrophy_scenario_3/run:33
+msgid ""
+"\n"
+"\n"
+"-----------------\n"
+"\n"
+"Repo distant\n"
+"\n"
+"-----------------\n"
+"\n"
+msgstr ""
+
+#. context
+#: ../../../git-pull/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Quand vous travaillez à plusieurs, il est possible que des commits soient"
+" présents\n"
+"sur le repository mais pas sur votre historique local. Comme ceci:\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-pull/git-before-pull.svg\n"
+"\n"
+"Vous devrez ``pull`` les modifications distantes sur votre branche "
+"principale.\n"
+"Comme vous n'avez aucun commit local qui ne trouve pas déjà dans la copie"
+" distante,\n"
+"``pull`` va juste mettre à jour la branche locale.\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-pull/git-after-pull.svg\n"
+"\n"
+"Maintenant imaginons que vous avez un commit local non poussé sur la "
+"copie distante:\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-pull/git-before-"
+"pull-2.svg\n"
+"\n"
+"A ce moment, si vous utiliser ``pull``, git va vous créer un commit "
+"supplémentaire\n"
+"qui fusionne les deux branches.\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-pull/git-after-pull-2.svg"
+"\n"
+"\n"
+"Vous devrez ``push`` le nouveau commit sur la copie distante pour achever"
+" la synchronisation.\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-pull/git-after-push-2.svg"
+"\n"
+"\n"
+"La commande correspondante est ``git pull``\n"
+"(voir `documentation "
+"<https://help.github.com/articles/fetching-a-remote/#pull>`_).\n"
+msgstr ""
+
+#. name
+#: ../../../git-pull/task.yaml
+msgid "Git: Syncroniser la copie locale avec celle distante"
+msgstr ""
+
+#. name, git-pull, header
+#: ../../../git-pull/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git-pull/git-"
+"pull.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Synchroniser-le avec son repository distant. Une fois que c'est "
+"fait, ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Le message de commit de fusion devra être \"MERGE\".\n"
+"\n"
+"Notez que le repository \"distant\" dans cet exercice n'est pas sur "
+"github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-pull/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+msgstr ""
+
+#. context
+#: ../../../git-push/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Cet exercice vous montre comment synchroniser votre historique local\n"
+"avec un historique sur serveur distant (sur `Github "
+"<https://github.com>`_, `Bitbucket <https://bitbucket.org>`_ ou autre).\n"
+"\n"
+"Dans cet exemple, vous avez deux branches, une branche locale ``master``\n"
+"et sa copie distante sur ``origin`` (un alias pour votre repository "
+"distant).\n"
+"Le dernier commit est dans l'historique local mais pas dans celui "
+"distant.\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-push/git-before-push.svg\n"
+"\n"
+"Si vous synchronizez les deux branches, vous allez ramener la référence "
+"de la branche ``master``\n"
+"distante sur le même commit que celui de la branche locale:\n"
+"\n"
+".. image:: https://inginious.org/course/git/git-push/git-after-push.svg\n"
+"\n"
+"Push des modifications locales sur l'historique distant se fait avec "
+"``git push`` (voir `documentation <https://help.github.com/articles"
+"/pushing-to-a-remote/>`_)."
+msgstr ""
+
+#. name
+#: ../../../git-push/task.yaml
+msgid "Git: Push les modifications de l'historique sur le repository distant"
+msgstr ""
+
+#. name, git-push, header
+#: ../../../git-push/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git-push/git-"
+"push.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Poussez les changements locaux sur la copie distante. Une fois "
+"que c'est fait, ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Notez que la copie distante dans cet exercice n'est pas sur github ou "
+"dans bitbucket mais dans le dossier `bare.git` de l'archive.\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-push/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+msgstr ""
+
+#. context
+#: ../../../git_branches/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Dans vos projets de groupe, si vous être plusieurs à impléménter des "
+"fonctionnalités différentes,\n"
+"vous risquez de vous marcher sur les pieds et d'arriver à un code qui ne "
+"fonctionnera jamais\n"
+"si chacun pousse du code incomplet.\n"
+"\n"
+"Pour éviter ce genre de problèmes, la majorité des développeur utilisent "
+"des ``feature branches``.\n"
+"Une branche est un pointeur vers une chaîne linéaire de commits dans "
+"l'historique.\n"
+"\n"
+"Dans l'exemple ci-dessous pourrait représenter un historique d'une "
+"application:\n"
+"\n"
+".. image:: https://inginious.org/course/git/git_branches/git-branches.svg"
+"\n"
+"\n"
+"Le login est déjà implémenté et stable mais deux membres de groupes sont "
+"en train d'implémenter le menu\n"
+"et le profil utilisateur.\n"
+"Et ces deux fonctionalités ne sont ni terminées, ni testées.\n"
+"Utiliser une branche séparée permet de sauvegarder votre travail sans "
+"compromettre le code qui a été testé (sur la branche ``master``).\n"
+"Quand le menu est prêt, vous pourrez fusionner la branche avec la branche"
+" master.\n"
+"\n"
+"``git branch`` ne vous permet que de créer une branche locale.\n"
+"Pour créer la branche distante correspondante,\n"
+"il faut la ``push`` comme vous l'avez fait précédemment pour la branche "
+"``master``."
+msgstr ""
+
+#. name
+#: ../../../git_branches/task.yaml
+msgid "Git: Utiliser plusieurs branches en git"
+msgstr ""
+
+#. name, git-branch, header
+#: ../../../git_branches/task.yaml
+msgid ""
+"Téléchargez l'`archive <https://inginious.org/course/git/git_branches"
+"/git-branch.zip>`_ qui contient déjà un repository cloné dans le sous-"
+"dossier `clone`.\n"
+"Vous devez faire en sorte que les historiques locaux et distants "
+"correspondent\n"
+"à l'image de l'énoncé. Partez du principe que les commits *Starting "
+"profile* et *Starting menu* créent\n"
+"chacun un fichier vide, respectivement profile.txt et menu.txt.\n"
+"\n"
+"Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Notez que le repository \"distant\" dans cet exercice n'est pas sur "
+"github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.\n"
+"\n"
+"::\n"
+"\n"
+"    git-branch/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]"
+msgstr ""
+
+#. context
+#: ../../../git_catastrophy_scenario_2/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Dans un `exercice précédent "
+"<https://inginious.org/course/git/git_catastrophy_scenario_1>`_,\n"
+"vous avez dû annuler un commit non-pushé.\n"
+"\n"
+"Vous pourriez être tenté de changer l'historique distant mais c'est "
+"généralement une mauvaise idée\n"
+"quand vous travaillez avec plusieurs personnes car ça risque "
+"d'**écraser** les modifications\n"
+"sur leur propre copie.\n"
+"Donc vous ne devriez pas utiliser ``reset`` dans ce cas mais uniquement "
+"``revert``.\n"
+"En effet, ce dernier va rajouter un commit supplémentaire mais ne va pas "
+"supprimer les anciens commits.\n"
+"\n"
+"On va donc passer de\n"
+"\n"
+".. image:: https://inginious.org/course/git/git_catastrophy_scenario_2"
+"/git-error.svg\n"
+"\n"
+"à\n"
+"\n"
+".. image:: https://inginious.org/course/git/git_catastrophy_scenario_2"
+"/git-revert.svg\n"
+"\n"
+"Vous pouvez ensuite pusher ces modifications sur l'historique distant:\n"
+"\n"
+".. image:: https://inginious.org/course/git/git_catastrophy_scenario_2"
+"/git-push.svg\n"
+msgstr ""
+
+#. name
+#: ../../../git_catastrophy_scenario_2/task.yaml
+msgid "Scénario Catastrophe Git 2 - Annuler un commit pushé"
+msgstr ""
+
+#. name, git-revert-remote, header
+#: ../../../git_catastrophy_scenario_2/task.yaml
+msgid ""
+"Téléchargez l'`archive "
+"<https://inginious.org/course/git/git_catastrophy_scenario_2/git-revert-"
+"remote.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Utilisez un ``revert`` pour annuler le dernier commit et pushez "
+"l'historique sur le repository distant. Une fois que c'est fait, "
+"ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Le message de commit devra être \"REVERT\".\n"
+"\n"
+"Votre soumission devra avoir l'architecture suivante:\n"
+"\n"
+"::\n"
+"\n"
+"    git-revert-remote/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]\n"
+msgstr ""
+
+#. context
+#: ../../../git_catastrophy_scenario_3/task.yaml
+msgid ""
+".. raw:: html\n"
+"\n"
+"  <script defer>\n"
+"\n"
+"  bodyHeight = 0;\n"
+"  function postSize() {\n"
+"      if (document.body.scrollHeight != bodyHeight) {\n"
+"          bodyHeight = document.body.scrollHeight;\n"
+"          window.parent.postMessage({height: document.body.scrollHeight},"
+" \"*\");\n"
+"      }\n"
+"  };\n"
+"  var target = document.querySelector('body');\n"
+"\n"
+"  var observer = new MutationObserver(postSize);\n"
+"\n"
+"  var config = { attributes: true, subtree: true }\n"
+"\n"
+"  observer.observe(target, config);\n"
+"  $(document).ready(function(){\n"
+"      setTimeout(postSize, 0);\n"
+"  });\n"
+"  </script>\n"
+"\n"
+"Imaginons que vous avez été imprudent en utilisant ``git reset --hard``\n"
+"et que vous avez écrasé votre historique distant avec ``git push "
+"--force``.\n"
+"\n"
+"Vous n'avez donc plus vos modifications dans le code, dans la ``staging "
+"zone``,\n"
+"dans votre historique local ou dans votre historique distant.\n"
+"Néanmoins, c'est rattrapable tant que vous n'avez pas supprimé le dossier"
+" ``.git``\n"
+"de votre projet !\n"
+"\n"
+"Pour cela vous devez utilisez les ``reference logs``, accessible avec "
+"``git reflog``.\n"
+"Ces logs contiennent tous les changements faits sur toutes les branches "
+"de votre historique.\n"
+"Vous pouvez donc récupérer tous les commits que vous avez écrasés.\n"
+"Une fois que vous avez identifié le point auquel vous voulez revenir,\n"
+"il suffit d'utiliser ``git merge`` pour replacer les modifs dans votre "
+"repo\n"
+"(et un traditionnel ``git push`` pour le repo distant)."
+msgstr ""
+
+#. name
+#: ../../../git_catastrophy_scenario_3/task.yaml
+msgid ""
+"Scénario Catastrophe Git 3 - Récupérer le code après avoir supprimé les "
+"modifs de votre code, de l'historique local et distant"
+msgstr ""
+
+#. name, git-reflog, header
+#: ../../../git_catastrophy_scenario_3/task.yaml
+msgid ""
+"Téléchargez l'`archive "
+"<https://inginious.org/course/git/git_catastrophy_scenario_3/git-"
+"reflog.zip>`_ qui contient déjà un repository cloné dans le sous-dossier "
+"`clone`. Votre repo a des historiques locaux et distants avec juste un "
+"commit suite à une mauvaise commande.\n"
+"Utilisez ``reflog`` pour retrouver tous les commits effacés\n"
+"et pusher-les sur le repository distant.\n"
+"\n"
+"Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.\n"
+"\n"
+"Notez que le repository \"distant\" dans cet exercice n'est pas sur "
+"github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.\n"
+"\n"
+"::\n"
+"\n"
+"    git-reflog/\n"
+"    ├── bare.git/\n"
+"    |   └── [...]\n"
+"    └── clone/\n"
+"        └── [...]"
+msgstr ""
+

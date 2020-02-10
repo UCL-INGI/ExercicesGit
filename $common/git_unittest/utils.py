@@ -6,19 +6,25 @@ import zipfile
 
 from inginious import feedback, input
 
+
 def init_translations():
     """
         Initialize gettext and translate to the proper language
     """
     lang = input.get_lang()
     try:
-        trad = gettext.GNUTranslations(open("./common/" + lang + ".mo", "rb"))
-    except FileNotFoundError:
+        lang_path = "/course/common/student/$i18n/lang/" + lang \
+                    + "/LC_MESSAGES/messages.mo"
+        with open(lang_path, "rb") as fileobj:
+            trad = gettext.GNUTranslations(fileobj)
+    except OSError:
         trad = gettext.NullTranslations()
     trad.install()
     return trad.gettext
 
+
 _ = init_translations()
+
 
 def remove_git_perm_checks(cwd=".", local=True):
     cmd = ["git", "config"]

@@ -1,0 +1,83 @@
+accessible: true
+author: Mathieu Jadin
+context: |
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans un `exercice précédent <https://inginious.org/course/git/git_catastrophy_scenario_1>`_,
+    vous avez dû annuler un commit non-pushé.
+
+    Vous pourriez être tenté de changer l'historique distant mais c'est généralement une mauvaise idée
+    quand vous travaillez avec plusieurs personnes car ça risque d'**écraser** les modifications
+    sur leur propre copie.
+    Donc vous ne devriez pas utiliser ``reset`` dans ce cas mais uniquement ``revert``.
+    En effet, ce dernier va rajouter un commit supplémentaire mais ne va pas supprimer les anciens commits.
+
+    On va donc passer de
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_2/git-error.svg
+
+    à
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_2/git-revert.svg
+
+    Vous pouvez ensuite pusher ces modifications sur l'historique distant:
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_2/git-push.svg
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Scénario Catastrophe Git 2 - Annuler un commit pushé
+network_grading: false
+order: 66
+problems:
+    git-revert-remote:
+        allowed_exts:
+        - .zip
+        name: ''
+        type: file
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git_catastrophy_scenario_2/git-revert-remote.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Utilisez un ``revert`` pour annuler le dernier commit et pushez l'historique sur le repository distant. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Le message de commit devra être "REVERT".
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-revert-remote/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

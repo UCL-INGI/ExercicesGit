@@ -1,0 +1,91 @@
+accessible: true
+author: Mathieu Jadin
+categories: []
+contact_url: ''
+context: |-
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans vos projets de groupe, si vous être plusieurs à impléménter des fonctionnalités différentes,
+    vous risquez de vous marcher sur les pieds et d'arriver à un code qui ne fonctionnera jamais
+    si chacun pousse du code incomplet.
+
+    Pour éviter ce genre de problèmes, la majorité des développeur utilisent des ``feature branches``.
+    Une branche est un pointeur vers une chaîne linéaire de commits dans l'historique.
+
+    Dans l'exemple ci-dessous pourrait représenter un historique d'une application:
+
+    .. image:: https://inginious.org/course/git/git_branches/git-branches.svg
+
+    Le login est déjà implémenté et stable mais deux membres de groupes sont en train d'implémenter le menu
+    et le profil utilisateur.
+    Et ces deux fonctionalités ne sont ni terminées, ni testées.
+    Utiliser une branche séparée permet de sauvegarder votre travail sans compromettre le code qui a été testé (sur la branche ``master``).
+    Quand le menu est prêt, vous pourrez fusionner la branche avec la branche master.
+
+    ``git branch`` ne vous permet que de créer une branche locale.
+    Pour créer la branche distante correspondante,
+    il faut la ``push`` comme vous l'avez fait précédemment pour la branche ``master``.
+environment_id: cpp
+environment_parameters:
+    limits:
+        hard_time: ''
+        time: '30'
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: 'Git: Utiliser plusieurs branches en git'
+network_grading: false
+order: 67
+problems:
+    git-branch:
+        header: |-
+            Téléchargez l'`archive <https://inginious.org/course/git/git_branches/git-branch.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`.
+            Vous devez faire en sorte que les historiques locaux et distants correspondent
+            à l'image de l'énoncé. Partez du principe que les commits *Starting profile* et *Starting menu* créent
+            chacun un fichier vide, respectivement profile.txt et menu.txt.
+
+            Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Notez que le repository "distant" dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            ::
+
+                git-branch/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        allowed_exts:
+        - .zip
+        name: ''
+        type: file
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

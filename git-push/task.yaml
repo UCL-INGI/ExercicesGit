@@ -1,0 +1,78 @@
+accessible: true
+author: Mathieu Jadin
+context: |-
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Cet exercice vous montre comment synchroniser votre historique local
+    avec un historique sur serveur distant (sur `Github <https://github.com>`_, `Bitbucket <https://bitbucket.org>`_ ou autre).
+
+    Dans cet exemple, vous avez deux branches, une branche locale ``master``
+    et sa copie distante sur ``origin`` (un alias pour votre repository distant).
+    Le dernier commit est dans l'historique local mais pas dans celui distant.
+
+    .. image:: https://inginious.org/course/git/git-push/git-before-push.svg
+
+    Si vous synchronizez les deux branches, vous allez ramener la référence de la branche ``master``
+    distante sur le même commit que celui de la branche locale:
+
+    .. image:: https://inginious.org/course/git/git-push/git-after-push.svg
+
+    Push des modifications locales sur l'historique distant se fait avec ``git push`` (voir `documentation <https://help.github.com/articles/pushing-to-a-remote/>`_).
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Push les modifications de l''historique sur le repository distant'
+network_grading: false
+order: 62
+problems:
+    git-push:
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git-push/git-push.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Poussez les changements locaux sur la copie distante. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Notez que la copie distante dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-push/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        allowed_exts:
+        - .zip
+        type: file
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

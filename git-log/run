@@ -1,0 +1,39 @@
+#!/bin/python3
+
+import os
+import sys
+
+from inginious import feedback, input
+
+lib_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "$common/git_unittest")
+sys.path.append(lib_folder)
+from utils import _
+
+grade = 100.0
+
+# Git-find-log subproblem
+
+data = input.get_input("git-find-log")
+if data == "a13dba1e469944772490909daa58c53ac8fa4b0d":
+    feedback.set_problem_result("success", "git-find-log")
+    feedback.set_problem_feedback(_("Bonne réponse"), "git-find-log")
+else:
+    feedback.set_problem_result("failed", "git-commit")
+    feedback.set_problem_feedback(_("Mauvaise réponse"), "git-find-log")
+    grade -= 50.
+
+# Git-find-blame subproblem
+
+data = input.get_input("git-find-blame")
+if data == "matthewm@ambientideas.com":
+    feedback.set_problem_result("success", "git-find-blame")
+    feedback.set_problem_feedback(_("Bonne réponse"), "git-find-blame")
+else:
+    feedback.set_problem_result("failed", "git-commit")
+    feedback.set_problem_feedback(_("Mauvaise réponse"), "git-find-blame")
+    grade -= 50.
+
+feedback.set_grade(grade)
+feedback.set_global_result("success" if grade == 100 else "failed")
+feedback.set_global_feedback(_("Bien joué !") if grade == 100 else _("Il y a des erreurs dans vos réponses"))

@@ -1,0 +1,100 @@
+accessible: true
+author: Mathieu Jadin
+context: |
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans la `tâche précédente <https://inginious.org/course/git/git-pull>`_,
+    vous avez fusionné votre historique local avec celui distant
+    sans modifications en conflit.
+
+    En effet, si vous avez deux commits sur deux copies différentes qui modifient la même ligne d'un fichier,
+    git n'a aucun moyen de savoir quelle version est correcte.
+
+    .. image:: https://inginious.org/course/git/git-merge-conflict/git-before-pull-2.svg
+
+    Donc il va préparer la ``staging zone`` avec les modifications sans conflit
+    et vous demande de résoudre manuellement les conflits pour les autres.
+
+    Pour vous aider, git a écrit dans chaque fichier en conflit les deux versions des modifications
+    marquées par les lignes ``<<<<<<<``, ``=======`` et ``>>>>>>>``.
+    D'abord, il met la version que vous avez dans votre copie locale et puis celle de la copie distante.
+    Par exemple:
+
+    .. code-block:: bash
+
+        <<<<<<< HEAD
+        Votre modification locale
+        =======
+        Le modification incompatible de la copie distante
+        >>>>>>>
+
+    Une fois les conflits résolus, il faut ajouter les modifications à la ``staging zone``
+    et créer le commit de fusion dans l'historique local:
+
+    .. image:: https://inginious.org/course/git/git-merge-conflict/git-after-pull-2.svg
+
+    Et enfin le pousser sur le repository distant.
+
+    .. image:: https://inginious.org/course/git/git-merge-conflict/git-after-push-2.svg
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Résolution de conflits'
+network_grading: false
+order: 65
+problems:
+    git-merge-conflict:
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git-merge-conflict/git-merge-conflict.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Synchroniser-le avec son repository distant, résolver le conflit. Le contenu des deux commits doit être concaténé.
+
+            Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Le message du commit de fusion devra être "MERGE".
+
+            Notez que le repository "distant" dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-merge-conflict/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        allowed_exts:
+        - .zip
+        name: ''
+        type: file
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

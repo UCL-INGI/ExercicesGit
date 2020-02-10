@@ -1,0 +1,91 @@
+accessible: true
+author: Mathieu Jadin
+context: |
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Quand vous travaillez à plusieurs, il est possible que des commits soient présents
+    sur le repository mais pas sur votre historique local. Comme ceci:
+
+    .. image:: https://inginious.org/course/git/git-pull/git-before-pull.svg
+
+    Vous devrez ``pull`` les modifications distantes sur votre branche principale.
+    Comme vous n'avez aucun commit local qui ne trouve pas déjà dans la copie distante,
+    ``pull`` va juste mettre à jour la branche locale.
+
+    .. image:: https://inginious.org/course/git/git-pull/git-after-pull.svg
+
+    Maintenant imaginons que vous avez un commit local non poussé sur la copie distante:
+
+    .. image:: https://inginious.org/course/git/git-pull/git-before-pull-2.svg
+
+    A ce moment, si vous utiliser ``pull``, git va vous créer un commit supplémentaire
+    qui fusionne les deux branches.
+
+    .. image:: https://inginious.org/course/git/git-pull/git-after-pull-2.svg
+
+    Vous devrez ``push`` le nouveau commit sur la copie distante pour achever la synchronisation.
+
+    .. image:: https://inginious.org/course/git/git-pull/git-after-push-2.svg
+
+    La commande correspondante est ``git pull``
+    (voir `documentation <https://help.github.com/articles/fetching-a-remote/#pull>`_).
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Syncroniser la copie locale avec celle distante'
+network_grading: false
+order: 64
+problems:
+    git-pull:
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git-pull/git-pull.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Synchroniser-le avec son repository distant. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Le message de commit de fusion devra être "MERGE".
+
+            Notez que le repository "distant" dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-pull/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        name: ''
+        allowed_exts:
+        - .zip
+        type: file
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

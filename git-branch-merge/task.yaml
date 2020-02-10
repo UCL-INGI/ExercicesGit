@@ -1,0 +1,87 @@
+accessible: true
+author: Mathieu Jadin
+context: |-
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans l'`exercice précédent <https://inginious.org/course/git/git_branches>`_,
+    vous avez vu comment créer et travailler sur des branches différentes.
+
+    Bien sûr, l'intérêt est de fusionner les modifications faites sur une branche dans la branche principale
+    une fois que vous avez testé.
+
+    .. image:: https://inginious.org/course/git/git-branch-merge/git-before-merge.svg
+
+    La branche de ``profile`` est prête pour être fusionnée à la branche ``master``.
+    Pour ce faire, il faut se placer sur la branche master (avec ``checkout``) et utiliser la commande ``git merge``.
+    La fusion de deux branches fonctionne de manière identique à un ``pull`` de l'historique distant.
+    S'il n'y a pas de modifs sur master (comme ici), le pointeur de la branche ne fait que se déplacer.
+    S'il y a des modifs compatibles sur master, un commit de fusion est créé automatiquement.
+    Si les modifs ne sont pas compatibles, il faudra résoudre le conflit exactement comme dans l'`exercice sur la résolution de conflits <https://inginious.org/course/git/git-merge-conflict>`_.
+
+    .. image:: https://inginious.org/course/git/git-branch-merge/git-after-merge.svg
+
+    Puis comme d'habitude, il faut push l'historique local de la branche ``master`` sur l'historique distant.
+
+    .. image:: https://inginious.org/course/git/git-branch-merge/git-after-push.svg
+
+    Il faut utiliser ``git merge <src-branch-name>`` sur la branche de destination.
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Fusionner des branches'
+network_grading: false
+order: 68
+problems:
+    git-branch-merge:
+        header: |-
+            Téléchargez l'`archive <https://inginious.org/course/git/git-branch-merge/git-branch-merge.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Votre repository est dans l'état décrit par la première image de l'énoncé. Arrangez-vous pour le faire passer dans l'état décrit par la dernière image.
+
+            Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Le message du commit de fusion devra être "MERGE".
+
+            Notez que le repository "distant" dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            ::
+
+                git-branch-merge/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        type: file
+        allowed_exts:
+        - .zip
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

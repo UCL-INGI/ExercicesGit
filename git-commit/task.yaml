@@ -1,0 +1,70 @@
+accessible: true
+author: Mathieu Jadin
+context: |
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans cet exercice, vous devez créer un ``commit`` avec les changements déjà présents dans la ``staging area``.
+
+    L'outil en ligne de commande pour créer des commits est ``git commit [-m message]``
+    (voir `documentation <https://git-scm.com/docs/git-commit>`_).
+
+    Vous pouvez également utiliser des outils graphiques tels que Sourcetree_ ou GitKraken_.
+
+    .. _Sourcetree: https://www.sourcetreeapp.com/
+    .. _GitKraken: https://www.gitkraken.com/
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Ajouter des fichiers à l''historique'
+network_grading: false
+order: 59
+problems:
+    git-commit:
+        allowed_exts:
+        - .zip
+        type: file
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git-commit/git-commit.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Committez le fichier `to_commit.txt` avec le message "Commit message". Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-commit/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        name: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

@@ -1,0 +1,55 @@
+#!/bin/python3
+
+import os
+import subprocess
+import sys
+
+from inginious import feedback
+
+lib_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "$common/git_unittest")
+sys.path.append(lib_folder)
+lib_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "/course/common/git_unittest")
+sys.path.append(lib_folder)
+from utils import _, unzip_task, unzip_solution
+
+grade = 100.0
+
+# Git-reset-local subproblem
+student_submission = unzip_task(task_id="git-reset-local", expected_subpaths=["clone", "clone/.git"])
+solution = unzip_solution(task_id="git-reset-local")
+if student_submission is not None:
+    cmd = ["python3", "/course/common/git_unittest/test.py", os.path.join(solution, "clone"), os.path.join(student_submission, "clone")]
+    pid = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = pid.communicate()
+    if pid.wait() == 0:
+        feedback.set_problem_result("success", "git-reset-local")
+        feedback.set_problem_feedback(_("Bonne réponse"), "git-reset-local")
+    else:
+        feedback.set_problem_result("failed", "git-reset-local")
+        feedback.set_problem_feedback(err.decode("utf-8"), "git-reset-local")
+        grade -= 50.
+else:
+    grade -= 50.
+
+# Git-revert-local subproblem
+student_submission = unzip_task(task_id="git-revert-local", expected_subpaths=["clone", "clone/.git"])
+solution = unzip_solution(task_id="git-revert-local")
+if student_submission is not None:
+    cmd = ["python3", "/course/common/git_unittest/test.py", os.path.join(solution, "clone"), os.path.join(student_submission, "clone")]
+    pid = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = pid.communicate()
+    if pid.wait() == 0:
+        feedback.set_problem_result("success", "git-revert-local")
+        feedback.set_problem_feedback(_("Bonne réponse"), "git-revert-local")
+    else:
+        feedback.set_problem_result("failed", "git-revert-local")
+        feedback.set_problem_feedback(err.decode("utf-8"), "git-revert-local")
+        grade -= 50.
+else:
+    grade -= 50.
+
+feedback.set_grade(grade)
+feedback.set_global_result("success" if grade == 100 else "failed")
+feedback.set_global_feedback(_("Bien joué !") if grade == 100 else _("Il y a des erreurs dans vos réponses"))

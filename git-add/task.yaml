@@ -1,0 +1,76 @@
+accessible: true
+author: Mathieu Jadin
+context: |
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Dans cet exercice vous allez devoir sélectionner des changements à rajouter dans la ``staging area``.
+
+    Vous pouvez utiliser la commande ``git add file [other-files...]`` pour cela.
+    Vous pouvez l'utiliser avec l'option ``-p``
+    pour sélectionner une partie des modifications à l'intérieur d'un fichier.
+
+    Pour regarder ce qui se trouve dans la ``staging area``,
+    vous pouvez utiliser la commande ``git status``.
+    Les fichiers en verts sont les fichiers dans la ``staging area``.
+    ``git diff --cached`` vous donnera les modifications exactes qui s'y trouve.
+
+    Vous pouvez également utiliser des outils graphiques tels que Sourcetree_ ou GitKraken_.
+
+    .. _Sourcetree: https://www.sourcetreeapp.com/
+    .. _GitKraken: https://www.gitkraken.com/
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: 'Git: Ajouter des fichiers dans la staging area'
+network_grading: false
+order: 57
+problems:
+    git-add:
+        type: file
+        name: ''
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git-add/git-add.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Ajouter uniquement les fichiers `to_stag.txt` et `to_stag_2.txt` à la ``staging area``. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-add/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        allowed_exts:
+        - .zip
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

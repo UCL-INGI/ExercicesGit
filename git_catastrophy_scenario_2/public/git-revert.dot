@@ -1,0 +1,20 @@
+digraph "git history" {
+	"master" [shape="box",style="rounded,filled",color="indianred4", fillcolor="lightpink", label="master"];
+	"master" -> "747bf";
+	"HEAD" [shape="box",style="rounded,filled",color="lightgoldenrod3", fillcolor="khaki1", label="HEAD"];
+	"HEAD" -> "master";
+
+	"origin/master" [shape="box",style="rounded,filled",color="indianred4", fillcolor="lightpink", label="origin/master"];
+	"origin/master" -> "a380b";
+	"origin" [shape="box",style="rounded,filled",color="lightgoldenrod3", fillcolor="khaki1", label="origin"];
+	"origin" -> "origin/master";
+
+	"76c16" [shape="box",style="rounded,filled",color="skyblue4", fillcolor="slategray1", label="76c16\nFirst commit"];
+	"b4c37" [shape="box",style="rounded,filled",color="skyblue4", fillcolor="slategray1", label="b4c37\nSecond commit"];
+	"b4c37" -> "76c16";
+	"a380b" [shape="box",style="rounded,filled",color="skyblue4", fillcolor="slategray1", label="a380b\nMisguided commit"];
+	"a380b" -> "b4c37";
+
+	"747bf" [shape="box",style="rounded,filled",color="skyblue4", fillcolor="slategray1", label="747bf\nRevert commit"];
+	"747bf" -> "a380b";
+}

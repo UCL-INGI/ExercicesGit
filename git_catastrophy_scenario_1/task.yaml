@@ -1,0 +1,107 @@
+accessible: true
+author: Mathieu Jadin
+context: |-
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    L'intérêt de conserver un historique est de pouvoir revenir en arrière
+    si on se trompe. Par exemple:
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_1/git-error.svg
+
+    Dans le cas où le commit n'est pas encore poussé sur le repository distant,
+    c'est facile. Vous pouvez ``reset`` ou ``revert`` les modifications.
+
+    La première méthode va supprimer le(s) commit(s) de l'historique.
+    Elle n'est valide que si vous voulez effacer les derniers commits mais elle est plus propre.
+    Notez que cette commande **peut modifier** le code si vous utiliser l'option ``--hard``
+    (donc faites attention quand vous l'utiliser).
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_1/git-reset.svg
+
+    Maintenant imaginons que votre modification foireuse se trouve au milieu de commits valides.
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_1/git-error-middle.svg
+
+    Dans ce cas, la meilleure option est d'utiliser ``revert`` pour annuler le commit foireux.
+    En effet, ça va créer un commit supplémentaire qui va annuler les modifications du commit foireux.
+    Notez que vous ne devez avoir aucune modification qui n'est pas dans l'historique local
+    pour que ça marche.
+
+    .. image:: https://inginious.org/course/git/git_catastrophy_scenario_1/git-revert.svg
+
+    Les commandes bash correspondantes sont ``git reset`` (`documentation <https://git-scm.com/docs/git-reset.html>`__) et ``git revert`` (`documentation <https://git-scm.com/docs/git-revert.html>`__).
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Scénario Catastrophe Git 1 - Annuler un commit non pushé
+network_grading: false
+order: 61
+problems:
+    git-reset-local:
+        allowed_exts:
+        - .zip
+        name: Reset un commit
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git_catastrophy_scenario_1/git-reset-local.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Utilisez un ``reset`` pour retirer le dernier commit sans supprimer les modifications dans le code ou la ``staging zone``. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-reset-local/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        type: file
+    git-revert-local:
+        name: Revert un commit
+        header: |
+            Téléchargez l'`archive <https://inginious.org/course/git/git_catastrophy_scenario_1/git-revert-local.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Utilisez un ``revert`` pour annuler l'avant-dernier commit sans supprimer le dernier. Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Le message de commit devra être "REVERT".
+
+            Votre soumission devra avoir l'architecture suivante:
+
+            ::
+
+                git-revert-local/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        type: file
+        allowed_exts:
+        - .zip
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

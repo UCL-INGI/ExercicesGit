@@ -1,0 +1,80 @@
+accessible: true
+author: Mathieu Jadin
+context: |-
+    .. raw:: html
+
+      <script defer>
+
+      bodyHeight = 0;
+      function postSize() {
+          if (document.body.scrollHeight != bodyHeight) {
+              bodyHeight = document.body.scrollHeight;
+              window.parent.postMessage({height: document.body.scrollHeight}, "*");
+          }
+      };
+      var target = document.querySelector('body');
+
+      var observer = new MutationObserver(postSize);
+
+      var config = { attributes: true, subtree: true }
+
+      observer.observe(target, config);
+      $(document).ready(function(){
+          setTimeout(postSize, 0);
+      });
+      </script>
+
+    Imaginons que vous avez été imprudent en utilisant ``git reset --hard``
+    et que vous avez écrasé votre historique distant avec ``git push --force``.
+
+    Vous n'avez donc plus vos modifications dans le code, dans la ``staging zone``,
+    dans votre historique local ou dans votre historique distant.
+    Néanmoins, c'est rattrapable tant que vous n'avez pas supprimé le dossier ``.git``
+    de votre projet !
+
+    Pour cela vous devez utilisez les ``reference logs``, accessible avec ``git reflog``.
+    Ces logs contiennent tous les changements faits sur toutes les branches de votre historique.
+    Vous pouvez donc récupérer tous les commits que vous avez écrasés.
+    Une fois que vous avez identifié le point auquel vous voulez revenir,
+    il suffit d'utiliser ``git merge`` pour replacer les modifs dans votre repo
+    (et un traditionnel ``git push`` pour le repo distant).
+environment: cpp
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    time: '30'
+    memory: '100'
+name: Scénario Catastrophe Git 3 - Récupérer le code après avoir supprimé les modifs
+    de votre code, de l'historique local et distant
+network_grading: false
+order: 69
+problems:
+    git-reflog:
+        name: ''
+        type: file
+        header: |-
+            Téléchargez l'`archive <https://inginious.org/course/git/git_catastrophy_scenario_3/git-reflog.zip>`_ qui contient déjà un repository cloné dans le sous-dossier `clone`. Votre repo a des historiques locaux et distants avec juste un commit suite à une mauvaise commande.
+            Utilisez ``reflog`` pour retrouver tous les commits effacés
+            et pusher-les sur le repository distant.
+
+            Une fois que c'est fait, ré-archivez le dossier complet et uploadez-le.
+
+            Notez que le repository "distant" dans cet exercice n'est pas sur github ou dans bitbucket mais dans le dossier `bare.git` de l'archive.
+
+            ::
+
+                git-reflog/
+                ├── bare.git/
+                |   └── [...]
+                └── clone/
+                    └── [...]
+        allowed_exts:
+        - .zip
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

@@ -8,6 +8,9 @@ from inginious import feedback, input
 lib_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                           "$common/git_unittest")
 sys.path.append(lib_folder)
+lib_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "/course/common/git_unittest")
+sys.path.append(lib_folder)
 from utils import _
 
 grade = 100.0
